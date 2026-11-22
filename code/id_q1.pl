@@ -187,6 +187,14 @@ clue(8, Solution) :-
     Department = research,
     Language \= javascript.
 % ------------------------------------------------------------------
+% clue(9, +Solution)
+%
+% Alex prefers the AI project.
+% ------------------------------------------------------------------
+
+clue(9, Solution) :-
+    person('Alex', Solution, p(_, _, _, 'AI')).
+% ------------------------------------------------------------------
 % apply_clues(+Solution)
 %
 % Applies all puzzle constraints.
