@@ -82,3 +82,14 @@ clue(1, Solution) :-
     member(p(Name, Department, _, 'AI'), Solution),
     Department \= research,
     Name \= 'Dana'.
+% ------------------------------------------------------------------
+% clue(2, +Solution)
+%
+% Alex does not work in development
+% and does not prefer C++.
+% ------------------------------------------------------------------
+
+clue(2, Solution) :-
+    person('Alex', Solution, p(_, Department, Language, _)),
+    Department \= development,
+    Language \= 'c++'.
