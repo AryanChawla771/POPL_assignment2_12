@@ -177,6 +177,3 @@ The files under `/tmp/` are temporary **local test artifacts** and are not part 
 - `prompts/P1.md`, `prompts/P2.md`, `prompts/S1.md`, `prompts/S2.md` — AI prompt records for the corresponding problems. The assignment requires prompts **actually used** to be recorded word for word; any reconstructed examples must be clearly distinguished from historical prompts.
 - [`P1_REPORT.md`](P1_REPORT.md) — Counts and interpretation of the original eight clues and the additional ninth clue.
 
-## Submission notes
-
-Submit the **GitHub repository link**, not a ZIP archive. Preserve the incremental Git commit history and use the required group-ID filenames. Confirm that all tests pass and the latest files have been pushed before submission.
