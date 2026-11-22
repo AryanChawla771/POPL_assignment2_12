@@ -1,4 +1,4 @@
-# CS F301 — Principles of Programming Languages
+# CS F301 : Principles of Programming Languages
 ## Assignment 2: Logic and Functional Programming
 
 This repository contains Group 12's solutions to CS F301 Assignment 2, covering logic programming in SWI-Prolog and functional programming in Scheme/Racket. It includes the four solutions, tests, AI development skill files, and prompt documentation.
