@@ -222,3 +222,12 @@ solve(Solution) :-
 main :-
     solve(Solution),
     writeln(Solution).
+% ------------------------------------------------------------------
+% count_solutions(+Goal, -Count)
+%
+% Counts the number of solutions produced by Goal.
+% ------------------------------------------------------------------
+
+count_solutions(Goal, Count) :-
+    findall(Goal, Goal, Solutions),
+    length(Solutions, Count).
