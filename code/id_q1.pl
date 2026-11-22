@@ -135,3 +135,14 @@ clue(6, Solution) :-
     person('Carla', Solution, p(_, Department, _, Project)),
     Department \= development,
     Project \= embedded.
+% ------------------------------------------------------------------
+% clue(7, +Solution)
+%
+% Dana's favorite language is not Java,
+% and she works in research or testing.
+% ------------------------------------------------------------------
+
+clue(7, Solution) :-
+    person('Dana', Solution, p(_, Department, Language, _)),
+    Language \= java,
+    (Department = research ; Department = testing).
