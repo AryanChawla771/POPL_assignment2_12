@@ -23,7 +23,37 @@ Our assignment consists of four programming problems across two programming para
 - `prompts/` - Exact prompts used during development
 - `P1_REPORT.md` - P1 solution count and interpretation
 
-### Directory Overview
+## Repository Structure
+
+```text
+POPL_assignment2_12/
+│
+├── code/
+│   ├── 12_q1.pl
+│   ├── 12_q2.pl
+│   ├── 12_q3.rkt
+│   ├── 12_q4.rkt
+│   └── P1_REPORT.md
+│
+├── tests/
+│   ├── test_s1.rkt
+│   └── test_s2.rkt
+│
+├── skills/
+│   ├── prolog-dev/
+│   │   └── SKILL.md
+│   └── scheme-dev/
+│       └── SKILL.md
+│
+├── prompts/
+│   ├── p1.md
+│   ├── s1.md
+│   └── s2.md
+│
+└── README.md
+```
+
+## Directory Overview
 
 | Directory / File | Description |
 |:---|:---|
