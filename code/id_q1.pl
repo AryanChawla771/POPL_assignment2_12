@@ -80,6 +80,25 @@ languages([python, java, 'c++', javascript]).
 
 projects(['AI', web, embedded, data]).
 % ------------------------------------------------------------------
+% assign_attributes(+Solution)
+%
+% Assigns a valid department, language and project
+% to every person.
+% ------------------------------------------------------------------
+
+assign_attributes([]).
+
+assign_attributes([p(_, Department, Language, Project) | Rest]) :-
+    departments(Departments),
+    languages(Languages),
+    projects(Projects),
+
+    member(Department, Departments),
+    member(Language, Languages),
+    member(Project, Projects),
+
+    assign_attributes(Rest).
+% ------------------------------------------------------------------
 % clue(1, +Solution)
 %
 % The friend who prefers the AI project
