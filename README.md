@@ -168,6 +168,10 @@ Expected output:
 ```text
 ((42 1 2) (3 4 5) (42 6) (42))
 ```
+Additional expected output:
+
+```text
+()
 
 The files under `/tmp/` are temporary **local test artifacts** and are not part of the submission.
 
