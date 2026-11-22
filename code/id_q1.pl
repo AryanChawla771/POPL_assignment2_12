@@ -103,3 +103,14 @@ clue(2, Solution) :-
 clue(3, Solution) :-
     member(p(_, testing, Language, _), Solution),
     Language = python.
+% ------------------------------------------------------------------
+% clue(4, +Solution)
+%
+% Ben prefers web projects
+% and does not work in testing.
+% ------------------------------------------------------------------
+
+clue(4, Solution) :-
+    person('Ben', Solution, p(_, Department, _, Project)),
+    Department \= testing,
+    Project = web.
