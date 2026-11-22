@@ -1,1 +1,21 @@
-# POPL_assignment2_12
+# CS F301 - Principles of Programming Languages
+## Assignment 2: Logic and Functional Programming
+
+**Group ID:** [YOUR GROUP ID]
+
+## Problems
+- P1: Department Assignment Puzzle (Prolog)
+- P2: Valid Arithmetic Equation (Prolog)
+- S1: Binary Tree Traversals (Scheme/Racket)
+- S2: Conditional Nested List Insertion (Scheme/Racket)
+
+## Project Structure
+- `code/` - Solution files
+- `tests/` - Test files
+- `skills/` - AI development skill files
+- `prompts/` - Exact prompts used during development
+- `P1_REPORT.md` - P1 solution count and interpretation
+
+## Required Environments
+- SWI-Prolog 9.x
+- Racket 8.x with #lang racket/base
