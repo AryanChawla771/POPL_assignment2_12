@@ -23,6 +23,17 @@ Our assignment consists of four programming problems across two programming para
 - `prompts/` - Exact prompts used during development
 - `P1_REPORT.md` - P1 solution count and interpretation
 
+### Directory Overview
+
+| Directory / File | Description |
+|:---|:---|
+| `code/` | Contains our four programming solutions. |
+| `tests/` | Contains test files for our implementations. |
+| `skills/` | Contains our custom AI development skill files for Prolog and Scheme. |
+| `prompts/` | Documents the AI prompts used during the development of individual problems. |
+| `code/P1_REPORT.md` | Documents the solution count and interpretation for Problem 1. |
+
+
 ## Required Environments
 
 We use the following programming environments:
@@ -33,7 +44,6 @@ We use the following programming environments:
 | Racket | 8.x |
 | Scheme Language | `#lang racket/base` |
 
----
 
 ## Development Approach
 
