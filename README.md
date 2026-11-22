@@ -10,10 +10,11 @@ This repository contains our solutions for Assignment 2 of CS F301 – Principle
 **Academic Year:** Semester-1 , 2026-2027
 
 ## Problems
-- P1: Department Assignment Puzzle, Reloaded (Prolog)
-- P2: Valid Arithmetic Equation (Prolog)
-- S1: Binary Tree Traversals (Scheme/Racket)
-- S2: Conditional Nested List Insertion (Scheme/Racket)
+Our assignment consists of four programming problems across two programming paradigms.
+- P1: Department Assignment Puzzle, Reloaded (Prolog) : Constraint-based puzzle solving, solution enumeration, and puzzle repair.
+- P2: Valid Arithmetic Equation (Prolog) : Generating and enumerating valid arithmetic equations through recursive expression construction.
+- S1: Binary Tree Traversals (Scheme/Racket) : Recursive tree traversal, height calculation, and leaf counting.
+- S2: Conditional Nested List Insertion (Scheme/Racket) : Recursive nested-list processing and higher-order functions.
 
 ## Project Structure
 - `code/` - Solution files
@@ -25,3 +26,16 @@ This repository contains our solutions for Assignment 2 of CS F301 – Principle
 ## Required Environments
 - SWI-Prolog 9.x
 - Racket 8.x with #lang racket/base
+
+## Development Approach
+
+Throughout the assignment, we have followed a structured, problem-wise development approach.
+
+- **Modularity:** We implement each problem independently to maintain clarity and separation of concerns.
+- **Recursion:** We employ recursive definitions for tree traversal, arithmetic expression construction, and nested-list processing.
+- **Higher-Order Functions:** We incorporate functional abstractions wherever required by the assignment.
+- **Testing:** We use test cases to evaluate our implementations against the specified requirements and edge cases.
+- **Documentation:** We maintain development prompts, reusable AI skill files, and problem-specific reports alongside our source code.
+
+---
+
