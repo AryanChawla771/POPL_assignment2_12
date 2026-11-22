@@ -114,3 +114,13 @@ clue(4, Solution) :-
     person('Ben', Solution, p(_, Department, _, Project)),
     Department \= testing,
     Project = web.
+% ------------------------------------------------------------------
+% clue(5, +Solution)
+%
+% The friend whose favorite language is Java
+% works in the design department.
+% ------------------------------------------------------------------
+
+clue(5, Solution) :-
+    member(p(_, Department, java, _), Solution),
+    Department = design.
