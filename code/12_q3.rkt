@@ -4,3 +4,10 @@
       ys
       (cons (car xs)
             (my-append (cdr xs) ys))))
+(define (my-inorder tree)
+  (if (null? tree)
+      '()
+      (my-append
+        (my-inorder (car (cdr tree)))
+        (cons (car tree)
+              (my-inorder (car (cdr (cdr tree))))))))
