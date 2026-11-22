@@ -18,3 +18,11 @@
             (my-append
               (my-preorder (car (cdr tree)))
               (my-preorder (car (cdr (cdr tree))))))))
+(define (my-postorder tree)
+  (if (null? tree)
+      '()
+      (my-append
+        (my-postorder (car (cdr tree)))
+        (my-append
+          (my-postorder (car (cdr (cdr tree))))
+          (cons (car tree) '())))))
