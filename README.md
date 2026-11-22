@@ -3,11 +3,18 @@
 
 This repository contains our solutions for Assignment 2 of CS F301 – Principles of Programming Languages. Through this assignment, we explore Logic Programming using Prolog and Functional Programming using Scheme/Racket, focusing on declarative problem-solving, recursion, higher-order functions, and systematic testing.
 
-**Group ID:** 12
+## Group Information
 
-**Group Number:** 68 [assignment 1 group number]
+| Detail | Information |
+|:---|:---|
+| **Group ID** | 12 |
+| **Group Number (Assignment 1)** | 68 |
+| **Academic Year** | 2026–2027 |
+| **Semester** | Semester 1 |
+| **Course** | CS F301 – Principles of Programming Languages |
 
-**Academic Year:** Semester-1 , 2026-2027
+
+
 
 ## Problems
 Our assignment consists of four programming problems across two programming paradigms.
@@ -51,7 +58,7 @@ POPL_assignment2_12/
 │   └── s2.md
 │
 └── README.md
-```
+---
 
 ## Directory Overview
 
