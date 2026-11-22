@@ -11,7 +11,7 @@ This repository contains Group 12's solutions to CS F301 Assignment 2, covering 
 | Group number (Assignment 1) | 68 |
 | Academic year | 2026–2027 |
 | Semester | 1 |
-| Course | CS F301 — Principles of Programming Languages |
+| Course | CS F301 : Principles of Programming Languages |
 
 ## Problems
 
