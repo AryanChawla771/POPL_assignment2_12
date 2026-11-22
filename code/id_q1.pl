@@ -208,7 +208,7 @@ apply_clues(Solution) :-
     clue(5, Solution),
     clue(6, Solution),
     clue(7, Solution),
-    clue(8, Solution).
+    clue(8, Solution),
     clue(9, Solution).
 % ------------------------------------------------------------------
 % solve(-Solution)
