@@ -1,6 +1,8 @@
 # CS F301 - Principles of Programming Languages
 ## Assignment 2: Logic and Functional Programming
 
+This repository contains our solutions for Assignment 2 of CS F301 – Principles of Programming Languages. Through this assignment, we explore Logic Programming using Prolog and Functional Programming using Scheme/Racket, focusing on declarative problem-solving, recursion, higher-order functions, and systematic testing.
+
 **Group ID:** 12
 
 **Group Number:** 68 [assignment 1 group number]
