@@ -186,3 +186,18 @@ clue(8, Solution) :-
     member(p(_, Department, Language, data), Solution),
     Department = research,
     Language \= javascript.
+% ------------------------------------------------------------------
+% apply_clues(+Solution)
+%
+% Applies all puzzle constraints.
+% ------------------------------------------------------------------
+
+apply_clues(Solution) :-
+    clue(1, Solution),
+    clue(2, Solution),
+    clue(3, Solution),
+    clue(4, Solution),
+    clue(5, Solution),
+    clue(6, Solution),
+    clue(7, Solution),
+    clue(8, Solution).
