@@ -26,3 +26,9 @@
         (my-append
           (my-postorder (car (cdr (cdr tree))))
           (cons (car tree) '())))))
+(define (tree-height tree)
+  (if (null? tree)
+      0
+      (+ 1
+         (max (tree-height (car (cdr tree)))
+              (tree-height (car (cdr (cdr tree))))))))
