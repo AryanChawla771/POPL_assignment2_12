@@ -2,6 +2,7 @@
 ## Assignment 2: Logic and Functional Programming
 
 **Group ID:** 12
+
 **Group Number:** 68 [assignment 1 group number]
 
 ## Problems
