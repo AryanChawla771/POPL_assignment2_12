@@ -18,3 +18,19 @@
                        (cons (car remaining) result))))
         (collect (cdr remaining)
                  (cons (f (car remaining)) acc)))))
+
+(define (make-inserter x len-ok?)
+  (letrec ((process-list
+            (lambda (lst)
+              (let* ((original-length (my-length lst))
+                     (processed
+                      (my-map
+                       (lambda (item)
+                         (if (or (pair? item) (null? item))
+                             (process-list item)
+                             item))
+                       lst)))
+                (if (len-ok? original-length)
+                    (cons x processed)
+                    processed)))))
+    process-list))
