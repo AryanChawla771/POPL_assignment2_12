@@ -46,7 +46,6 @@ POPL_assignment2_12/
 |   ├── P2.md
 │   ├── S1.md
 │   └── S2.md
-│
 |
 ├── P1_REPORT.md
 |
