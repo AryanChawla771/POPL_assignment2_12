@@ -71,6 +71,15 @@ unique_attributes(Solution) :-
     maplist(project, Solution, Projects),
     all_unique(Projects).
 % ------------------------------------------------------------------
+% Allowed attribute values
+% ------------------------------------------------------------------
+
+departments([research, development, design, testing]).
+
+languages([python, java, 'c++', javascript]).
+
+projects(['AI', web, embedded, data]).
+% ------------------------------------------------------------------
 % clue(1, +Solution)
 %
 % The friend who prefers the AI project
