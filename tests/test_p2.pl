@@ -56,4 +56,12 @@ run_all_tests :-
           count_equations([], 0)),
     check('No duplicates and sorted order in public example',
           ( all_equations([4,2,5,3], Es),
-            sort(Es, Es) )).
+            sort(Es, Es) )),
+    
+    check('Exact intermediate division',
+          ( all_equations([8,4,2], Es),
+            member("8/4=2", Es) )),
+
+    check('Division by zero is rejected',
+          \+ apply_op(/, 4, 0, _)).
+
