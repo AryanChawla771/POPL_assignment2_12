@@ -70,3 +70,15 @@ unique_attributes(Solution) :-
 
     maplist(project, Solution, Projects),
     all_unique(Projects).
+% ------------------------------------------------------------------
+% clue(1, +Solution)
+%
+% The friend who prefers the AI project
+% does not work in research
+% and is not Dana.
+% ------------------------------------------------------------------
+
+clue(1, Solution) :-
+    member(p(Name, Department, _, 'AI'), Solution),
+    Department \= research,
+    Name \= 'Dana'.
