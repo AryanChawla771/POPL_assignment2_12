@@ -40,7 +40,8 @@ Write pure recursive functions.
 
 Never mutate data.
 
-Never use side effects except display and newline where required.
+Avoid side effects except the required display and newline
+operations, and read for input in S2.
 
 ---
 
@@ -207,3 +208,53 @@ Before returning code verify
 - Confusing atoms with lists
 - Missing newline
 - Failing on deeply nested inputs
+---
+
+# Exact Allowed Built-ins
+
+Use only the following built-ins, as specified in the assignment:
+
+- Definitions and binding: define, lambda, let, let*, letrec, named let
+- Control flow: if, cond (with else), and, or, not, begin
+- Lists and symbols: quote ('), cons, car, cdr, list, and compositions of car and cdr up to four levels
+- Predicates and lookup: null?, pair?, eq?, assq, assoc
+- Arithmetic and comparison: +, -, *, <, >, <=, >=, =, max
+- Output: display, newline
+- Input: read (S2 only)
+
+Do not use any other racket/base built-ins.
+
+# AI Prompt Decomposition Rule
+
+Each prompt must request exactly one unit of work:
+- One function
+- One test file
+- One code review
+
+Never generate the complete solution to an entire assignment problem in a single response.
+
+When implementing one function, assume existing helpers are available when specified. Do not implement unrelated functions.
+
+# S2 Additional Correctness Requirements
+
+- Measure every list's original top-level length before insertion.
+- Process the outermost list and every nested list.
+- Empty lists have length zero.
+- Atoms must remain unchanged.
+- Use my-length and my-map as required.
+- make-inserter must return a function that performs recursive insertion.
+- The final insert-if-short must use make-inserter.
+- The final file must contain only one definition of insert-if-short.
+- Test lists containing 10,000 elements and nesting depth 100.
+- Review stack usage, termination, and unnecessary repeated traversal.
+
+# Submission and Verification Rules
+
+- Submitted files must contain definitions only.
+- No top-level test calls or printed output.
+- Tests must be kept in separate files.
+- Do not claim tests passed without actual execution.
+- Check all output against the assignment's exact examples.
+- Ensure every printed output line ends with a newline.
+- Log every LLM prompt exactly as submitted, including debugging and review prompts.
+- Keep incremental Git commits reflecting individual functions, tests, and reviews.
