@@ -5,8 +5,9 @@ This repository contains our solutions for Assignment 2 of CS F301 – Principle
 
 ## Group Information
 
-|:---|:---|
+
 | **Group ID** | 12 |
+|:---|:---|
 | **Group Number (Assignment 1)** | 68 |
 | **Academic Year** | 2026–2027 |
 | **Semester** | Semester 1 |
