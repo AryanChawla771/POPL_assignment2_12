@@ -86,18 +86,24 @@ projects(['AI', web, embedded, data]).
 % to every person.
 % ------------------------------------------------------------------
 
-assign_attributes([]).
-
-assign_attributes([p(_, Department, Language, Project) | Rest]) :-
+% Choose each attribute exactly once as the people are assigned.
+% select/3 is provided by the permitted lists library. This avoids
+% enumerating 4^12 combinations and filtering duplicates afterward.
+assign_attributes(Solution) :-
     departments(Departments),
     languages(Languages),
     projects(Projects),
+    assign_unique(Solution, Departments, Languages, Projects).
 
-    member(Department, Departments),
-    member(Language, Languages),
-    member(Project, Projects),
+assign_unique([], [], [], []).
+assign_unique([p(_, Department, Language, Project) | Rest],
+              Departments, Languages, Projects) :-
+    select(Department, Departments, RemainingDepartments),
+    select(Language, Languages, RemainingLanguages),
+    select(Project, Projects, RemainingProjects),
+    assign_unique(Rest, RemainingDepartments, RemainingLanguages,
+                  RemainingProjects).
 
-    assign_attributes(Rest).
 % ------------------------------------------------------------------
 % clue(1, +Solution)
 %
@@ -187,56 +193,47 @@ clue(8, Solution) :-
     Department = research,
     Language \= javascript.
 % ------------------------------------------------------------------
-% clue(9, +Solution)
-%
-% Alex prefers the AI project.
-% ------------------------------------------------------------------
-
+% Clue 9 distinguishes one of the solutions satisfying clues 1..8.
+% CLUE 9: The friend who prefers AI projects works in testing.
 clue(9, Solution) :-
-    person('Alex', Solution, p(_, _, _, 'AI')).
-% ------------------------------------------------------------------
-% apply_clues(+Solution)
-%
-% Applies all puzzle constraints.
-% ------------------------------------------------------------------
+    member(p(_, testing, _, 'AI'), Solution).
 
-apply_clues(Solution) :-
-    clue(1, Solution),
-    clue(2, Solution),
-    clue(3, Solution),
-    clue(4, Solution),
-    clue(5, Solution),
-    clue(6, Solution),
-    clue(7, Solution),
-    clue(8, Solution),
-    clue(9, Solution).
-% ------------------------------------------------------------------
-% solve(-Solution)
-%
-% Generates a valid solution satisfying
-% all puzzle constraints.
-% ------------------------------------------------------------------
+% apply_active_clues(+Active, +Solution)
+% Apply exactly the clue numbers requested by the caller.
+apply_active_clues([], _).
+apply_active_clues([Number | Rest], Solution) :-
+    clue(Number, Solution),
+    apply_active_clues(Rest, Solution).
 
-solve(Solution) :-
+% solve_with_clues(+Active, -Solution)
+% Enumerates fully assigned, unique attribute combinations.
+solve_with_clues(Active, Solution) :-
     solution_template(Solution),
     assign_attributes(Solution),
     unique_attributes(Solution),
-    apply_clues(Solution).
-% ------------------------------------------------------------------
-% main/0
-%
-% Finds and prints one valid solution.
-% ------------------------------------------------------------------
+    apply_active_clues(Active, Solution).
 
+% solve(-Solution) produces a solution to the original eight clues.
+solve(Solution) :-
+    solve_with_clues([1,2,3,4,5,6,7,8], Solution).
+
+% Print a single person's attributes in the required format.
+print_person(p(Name, Department, Language, Project)) :-
+    format('~w = [~w, ~w, ~w]~n',
+           [Name, Department, Language, Project]).
+
+% main/0 prints a solution to clues 1..8 in the required order.
 main :-
-    solve(Solution),
-    writeln(Solution).
-% ------------------------------------------------------------------
-% count_solutions(+Goal, -Count)
-%
-% Counts the number of solutions produced by Goal.
-% ------------------------------------------------------------------
+    once(solve(Solution)),
+    Solution = [Alex, Ben, Carla, Dana],
+    print_person(Alex),
+    print_person(Ben),
+    print_person(Carla),
+    print_person(Dana).
 
-count_solutions(Goal, Count) :-
-    findall(Goal, Goal, Solutions),
-    length(Solutions, Count).
+% count_solutions(+Active, -N) counts solutions to exactly Active.
+count_solutions(Active, N) :-
+    findall(Solution,
+            solve_with_clues(Active, Solution),
+            Solutions),
+    length(Solutions, N).
