@@ -37,5 +37,7 @@ Throughout the assignment, we have followed a structured, problem-wise developme
 - **Testing:** We use test cases to evaluate our implementations against the specified requirements and edge cases.
 - **Documentation:** We maintain development prompts, reusable AI skill files, and problem-specific reports alongside our source code.
 
----
+## Academic Integrity & Collaboration
+
+All solutions, tests, prompts, and development resources in this repository have been prepared by **Group 12** as part of the CS F301 Assignment 2 submission. The repository also maintains our development process and supporting documentation.
 
