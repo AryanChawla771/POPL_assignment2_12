@@ -42,11 +42,13 @@ POPL_assignment2_12/
 │   └── scheme-dev/
 │       └── SKILL.md
 ├── prompts/
-│   ├── p1.md
-│   ├── s1.md
-│   └── s2.md
+│   ├── P1.md
+|   ├── P2.md
+│   ├── S1.md
+│   └── S2.md
 │
 └── README.md
+└── P1_REPORT.md
 ```
 
 ## Environment
