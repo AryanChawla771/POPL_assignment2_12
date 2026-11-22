@@ -58,7 +58,7 @@ POPL_assignment2_12/
 │   └── s2.md
 │
 └── README.md
----
+```
 
 ## Directory Overview
 
