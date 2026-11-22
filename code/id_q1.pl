@@ -25,3 +25,21 @@ solution_template([
     p('Carla', _, _, _),
     p('Dana',  _, _, _)
 ]).
+% ------------------------------------------------------------------
+% unique_attributes(+Solution)
+%
+% Ensures that every department, language and project
+% appears exactly once.
+% ------------------------------------------------------------------
+
+
+    
+department(p(_, Department, _, _), Department).
+
+language(p(_, _, Language, _), Language).
+
+project(p(_, _, _, Project), Project).
+
+person(Name, Solution, Person) :-
+    member(Person, Solution),
+    Person = p(Name, _, _, _).
