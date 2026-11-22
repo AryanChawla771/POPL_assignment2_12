@@ -21,6 +21,11 @@
 (define t5 '(9 () ()))
 
 
+;; Test 6: Left-skewed tree
+(define t6
+  '(3 (2 (1 () ()) ()) ()))
+
+
 ;; Test 1: Balanced tree
 (print-inorder t1)
 (print-all-traversals t1)
@@ -45,3 +50,10 @@
 (print-inorder t5)
 (print-all-traversals t5)
 (print-height-and-leaves t5)
+
+
+;; Test 6: Left-skewed tree
+(print-inorder t6)
+(print-all-traversals t6)
+(print-height-and-leaves t6)
+
