@@ -41,3 +41,7 @@
     (else
      (+ (tree-leaves (car (cdr tree)))
         (tree-leaves (car (cdr (cdr tree))))))))
+
+(define (print-inorder tree)
+  (display (my-inorder tree))
+  (newline))
