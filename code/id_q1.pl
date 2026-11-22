@@ -124,3 +124,14 @@ clue(4, Solution) :-
 clue(5, Solution) :-
     member(p(_, Department, java, _), Solution),
     Department = design.
+% ------------------------------------------------------------------
+% clue(6, +Solution)
+%
+% Carla's project preference is not embedded
+% and her department is not development.
+% ------------------------------------------------------------------
+
+clue(6, Solution) :-
+    person('Carla', Solution, p(_, Department, _, Project)),
+    Department \= development,
+    Project \= embedded.
