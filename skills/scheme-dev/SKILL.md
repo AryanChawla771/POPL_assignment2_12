@@ -1,6 +1,6 @@
 ---
-name: scheme-dev
-description: Development guidelines for Racket/Scheme solutions used in CS F301 Principles of Programming Languages Assignment 2.
+Name: scheme-dev
+Description: Development guidelines for Racket/Scheme solutions used in CS F301 Principles of Programming Languages Assignment 2.
 ---
 
 # Scheme Development Skill
