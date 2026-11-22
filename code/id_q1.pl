@@ -201,3 +201,15 @@ apply_clues(Solution) :-
     clue(6, Solution),
     clue(7, Solution),
     clue(8, Solution).
+% ------------------------------------------------------------------
+% solve(-Solution)
+%
+% Generates a valid solution satisfying
+% all puzzle constraints.
+% ------------------------------------------------------------------
+
+solve(Solution) :-
+    solution_template(Solution),
+    assign_attributes(Solution),
+    unique_attributes(Solution),
+    apply_clues(Solution).
