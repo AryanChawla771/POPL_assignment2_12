@@ -11,3 +11,10 @@
         (my-inorder (car (cdr tree)))
         (cons (car tree)
               (my-inorder (car (cdr (cdr tree))))))))
+(define (my-preorder tree)
+  (if (null? tree)
+      '()
+      (cons (car tree)
+            (my-append
+              (my-preorder (car (cdr tree)))
+              (my-preorder (car (cdr (cdr tree))))))))
