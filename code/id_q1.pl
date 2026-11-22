@@ -146,3 +146,15 @@ clue(7, Solution) :-
     person('Dana', Solution, p(_, Department, Language, _)),
     Language \= java,
     (Department = research ; Department = testing).
+% ------------------------------------------------------------------
+% clue(8, +Solution)
+%
+% The friend who prefers data projects
+% works in research
+% and does not use JavaScript.
+% ------------------------------------------------------------------
+
+clue(8, Solution) :-
+    member(p(_, Department, Language, data), Solution),
+    Department = research,
+    Language \= javascript.
