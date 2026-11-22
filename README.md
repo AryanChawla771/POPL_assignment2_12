@@ -5,8 +5,10 @@
 
 **Group Number:** 68 [assignment 1 group number]
 
+**Academic Year:** Semester-1 , 2026-2027
+
 ## Problems
-- P1: Department Assignment Puzzle (Prolog)
+- P1: Department Assignment Puzzle, Reloaded (Prolog)
 - P2: Valid Arithmetic Equation (Prolog)
 - S1: Binary Tree Traversals (Scheme/Racket)
 - S2: Conditional Nested List Insertion (Scheme/Racket)
