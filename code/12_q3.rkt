@@ -45,3 +45,11 @@
 (define (print-inorder tree)
   (display (my-inorder tree))
   (newline))
+
+(define (print-all-traversals tree)
+  (display (my-inorder tree))
+  (newline)
+  (display (my-preorder tree))
+  (newline)
+  (display (my-postorder tree))
+  (newline))
