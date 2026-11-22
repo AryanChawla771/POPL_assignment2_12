@@ -1,7 +1,7 @@
 # CS F301 - Principles of Programming Languages
 ## Assignment 2: Logic and Functional Programming
 
-**Group ID:** [YOUR GROUP ID]
+**Group ID:** 12
 
 ## Problems
 - P1: Department Assignment Puzzle (Prolog)
