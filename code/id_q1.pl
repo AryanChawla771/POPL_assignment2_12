@@ -93,3 +93,13 @@ clue(2, Solution) :-
     person('Alex', Solution, p(_, Department, Language, _)),
     Department \= development,
     Language \= 'c++'.
+% ------------------------------------------------------------------
+% clue(3, +Solution)
+%
+% The friend working in the testing department
+% likes Python.
+% ------------------------------------------------------------------
+
+clue(3, Solution) :-
+    member(p(_, testing, Language, _), Solution),
+    Language = python.
