@@ -160,6 +160,7 @@ racket /tmp/s2_final_test.rkt
 cp code/12_q4.rkt /tmp/s2_demo.rkt
 echo '(print-insert-result)' >> /tmp/s2_demo.rkt
 printf '42\n((1 2) (3 4 5) (6) ())\n3\n' | racket /tmp/s2_demo.rkt
+printf '7\n()\n0\n' | racket /tmp/s2_demo.rkt
 ```
 
 Expected output:
