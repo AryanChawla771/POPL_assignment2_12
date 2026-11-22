@@ -9,8 +9,7 @@
 Implementation:
 
 ```prolog
-clue(9, Solution) :-
-    person('Alex', Solution, p(_, _, _, 'AI')).
+ CLUE 9: The friend who prefers AI projects works in testing.
 ```
 
 ## Justification
