@@ -43,3 +43,30 @@ project(p(_, _, _, Project), Project).
 person(Name, Solution, Person) :-
     member(Person, Solution),
     Person = p(Name, _, _, _).
+% ------------------------------------------------------------------
+% all_unique(+List)
+%
+% Succeeds if every element in List is unique.
+% ------------------------------------------------------------------
+
+all_unique([]).
+
+all_unique([Head | Tail]) :-
+    \+ member(Head, Tail),
+    all_unique(Tail).
+% ------------------------------------------------------------------
+% unique_attributes(+Solution)
+%
+% Ensures that every department, language and project
+% appears exactly once.
+% ------------------------------------------------------------------
+
+unique_attributes(Solution) :-
+    maplist(department, Solution, Departments),
+    all_unique(Departments),
+
+    maplist(language, Solution, Languages),
+    all_unique(Languages),
+
+    maplist(project, Solution, Projects),
+    all_unique(Projects).
