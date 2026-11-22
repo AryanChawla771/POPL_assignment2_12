@@ -1,7 +1,7 @@
 % Tests for CS F301 P2, based on the assignment's public predicate API.
 % Run from repository root:
 % swipl -q -s tests/test_p2.pl -g run_tests -t halt
-% Requires your existing code/12_q2.pl, which was NOT supplied for review.
+
 
 :- ['../code/12_q2.pl'].
 
