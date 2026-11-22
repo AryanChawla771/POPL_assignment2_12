@@ -173,6 +173,7 @@ Additional expected output:
 ```text
 ()
 
+```
 The files under `/tmp/` are temporary **local test artifacts** and are not part of the submission.
 
 ## Development documentation
