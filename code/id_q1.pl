@@ -213,3 +213,12 @@ solve(Solution) :-
     assign_attributes(Solution),
     unique_attributes(Solution),
     apply_clues(Solution).
+% ------------------------------------------------------------------
+% main/0
+%
+% Finds and prints one valid solution.
+% ------------------------------------------------------------------
+
+main :-
+    solve(Solution),
+    writeln(Solution).
