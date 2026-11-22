@@ -171,6 +171,3 @@ Temporary files in `/tmp/` are for testing and **are not part of the repository 
 - `prompts/P1.md`, `prompts/P2.md`, `prompts/S1.md`, `prompts/S2.md`: problem-specific AI prompt documentation. The assignment requires verbatim records of prompts actually used; retrospectively drafted examples must not be represented as original prompt history.
 - `P1_REPORT.md`: explanation of why the eight original clues are ambiguous (`N = 3`) and how the additional valid clue yields one solution (`N = 1`).
 
-## Submission notes
-
-Submit the **GitHub repository link**, not a ZIP archive. Preserve the incremental Git commit history and use the required group-ID filenames. Confirm that all tests pass and the latest files have been pushed before submission.
