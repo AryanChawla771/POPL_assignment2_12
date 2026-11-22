@@ -35,6 +35,17 @@ run_all_tests :-
           ( solve_with_clues([1,2,3,4,5,6,7,8,9], S9),
             clue(9, S9) )),
 
+    
+    check('Exact unique solution after clue 9',
+          solve_with_clues(
+              [1,2,3,4,5,6,7,8,9],
+              [p('Alex',design,java,embedded),
+               p('Ben',development,javascript,web),
+               p('Carla',testing,python,'AI'),
+               p('Dana',research,'c++',data)]
+          )),
+
+
     check('Solution has four people in required order',
           ( solve(SOrder),
             SOrder = [p('Alex',_,_,_),p('Ben',_,_,_),
