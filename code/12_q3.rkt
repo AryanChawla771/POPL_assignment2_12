@@ -32,3 +32,12 @@
       (+ 1
          (max (tree-height (car (cdr tree)))
               (tree-height (car (cdr (cdr tree))))))))
+(define (tree-leaves tree)
+  (cond
+    ((null? tree) 0)
+    ((and (null? (car (cdr tree)))
+          (null? (car (cdr (cdr tree)))))
+     1)
+    (else
+     (+ (tree-leaves (car (cdr tree)))
+        (tree-leaves (car (cdr (cdr tree))))))))
