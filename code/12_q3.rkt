@@ -53,3 +53,8 @@
   (newline)
   (display (my-postorder tree))
   (newline))
+
+(define (print-height-and-leaves tree)
+  (display (list (tree-height tree)
+                 (tree-leaves tree)))
+  (newline))
