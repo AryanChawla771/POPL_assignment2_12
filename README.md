@@ -24,8 +24,16 @@ Our assignment consists of four programming problems across two programming para
 - `P1_REPORT.md` - P1 solution count and interpretation
 
 ## Required Environments
-- SWI-Prolog 9.x
-- Racket 8.x with #lang racket/base
+
+We use the following programming environments:
+
+| Environment | Version |
+|:---|:---|
+| SWI-Prolog | 9.x |
+| Racket | 8.x |
+| Scheme Language | `#lang racket/base` |
+
+---
 
 ## Development Approach
 
